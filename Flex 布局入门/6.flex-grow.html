@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-grow 对比测试</title>
+    <style>
+        /* flex-grow 设置元素放大比例 */
+        /* flex-shrink 设置元素缩小比例 */
+        .container {     
+            width: 1000px;
+            height: 200px;
+            background-color: #e5e5e5;
+            border: 1px solid black;
+            margin-top: 1px;
+            display: flex;
+            flex-direction: row;    
+            justify-content: space-between; 
+        }
+
+        .test1 {
+            align-items: center;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .red {
+            background-color: red;
+            height: 100px;
+            /* 设置元素在容器内的填充比例,默认是0 */
+            flex-grow: 1;
+        }
+        .green {
+            background-color: green;
+            height: 150px;
+            flex-grow: 2;
+        }
+        .blue {
+            background-color: blue;
+            height: 50px;
+            flex-grow: 3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container test1">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+   
+</body>
+</html>

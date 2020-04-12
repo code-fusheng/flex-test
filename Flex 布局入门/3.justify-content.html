@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify-content 对比测试</title>
+    <style>
+        .container {     
+            width: 1000px;
+            height: 100px;
+            background-color: #e5e5e5;
+            border: 1px solid black;
+            margin-top: 1px;
+            display: flex;
+            flex-direction: row;     
+        }
+
+        .test1 {
+            /* justify 设置主轴上的对齐方式 */
+            /* 1.默认 在主轴开始方向进行对齐 */
+            justify-content: flex-start;
+        }
+        .test2 {
+            /* 2.在主轴结束方向进行对齐 */
+            justify-content: flex-end;
+        }
+        .test3 {
+            /* 3.居中对齐 */
+            justify-content: center;
+        }
+        .test4 {
+            /* 4.两端对齐,剩余未填充部分空白 */
+            justify-content: space-between;
+        }
+        .test5 {
+            /* 5.两端对齐,每个元素左右两边间隔一致 */
+            justify-content: space-around;
+        }
+        .test6 {
+            /* 6.均匀分散,每块留白部分相等 */
+            justify-content: space-evenly;
+        }
+        .item {
+            width: 200px;
+            height: 100px;
+        }
+        .red {background-color: red;}
+        .green {background-color: green;}
+        .blue {background-color: blue;}
+    </style>
+</head>
+<body>
+
+    <div class="container test1">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    <div class="container test2">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    <div class="container test3">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    <div class="container test4">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    <div class="container test5">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+
+    
+</body>
+</html>

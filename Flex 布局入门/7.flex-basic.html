@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-basic 对比测试</title>
+    <style>
+        /* flex-basic 设置元素固定或者自动空间的占比 */
+        .container {     
+            width: 1000px;
+            height: 200px;
+            background-color: #e5e5e5;
+            border: 1px solid black;
+            margin-top: 1px;
+            display: flex;
+            flex-direction: row;    
+            justify-content: space-between; 
+        }
+
+        .test1 {
+            align-items: center;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+        }
+        
+        .red {
+            background-color: red;
+            height: 100px;
+            flex-basis: 100px;
+        }
+        .green {
+            background-color: green;
+            height: 150px;
+            flex-basis: 2em;
+        }
+        .blue {
+            background-color: blue;
+            height: 50px;
+            flex-basis: 2em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container test1">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+   
+</body>
+</html>

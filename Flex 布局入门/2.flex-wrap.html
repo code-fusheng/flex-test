@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-warp 对比测试</title>
+    <style>
+        .container {
+            width: 500px;
+            background-color: #e5e5e5;
+            display: flex;
+            flex-direction: row;
+            margin-top: 1px;
+            border: 1px solid black;
+        }
+        .test1 {
+            /* 1.默认 容器中的元素不进行换行 */
+            flex-wrap: nowrap;
+        }
+        .test2 {
+            /* 2.控制容器中的元素 如果剩余的宽度不够,就进行换行 */
+            flex-wrap: wrap;
+        }
+        .test3 {
+            /* 3.控制容器中的元素 如果剩余的宽度不够,就进行换行 且是相反方向换行 */
+            flex-wrap: wrap-reverse;
+        }
+        .item {
+            width: 200px;
+        }
+        .red {background-color: red;}
+        .green {background-color: green;}
+        .blue {background-color: blue;}
+    </style>
+</head>
+<body>
+
+    <div class="container test1">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    <div class="container test2">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    <div class="container test3">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    
+</body>
+</html>

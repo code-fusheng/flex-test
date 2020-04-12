@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex-direction 对比测试</title>
+    <style>
+        .container {
+            width: 1000px;
+            margin-top: 5px;
+            border: 1px solid black;
+            /* background-color: #f5f5f5; */
+            background-color: #e5e5e5;
+            /* 表示这是一个 flex 容器 */
+            display: flex;     
+        }
+        .test1 {
+            /* 1.定义容器方向是横向 --> 元素默认从左到右(默认) */
+            flex-direction: row;
+        }
+        .test2 {
+            /* 2.定义容器方向是横向 --> 元素从右到左 不是右对齐 */
+            flex-direction: row-reverse;
+        }
+        .test3 {
+            /* 3.定义容器方向是纵向 元素从上到下 */
+            flex-direction: column;
+        }
+        .test4 {
+            /* 4.定义容器方向是纵向 元素从下到上 不是下对齐 */
+            flex-direction: column-reverse;
+        }
+
+        .item {
+            width: 200px;
+        }
+        .red {background-color: red;}
+        .green {background-color: green;}
+        .blue {background-color: blue;}
+    </style>
+</head>
+<body>
+    <div class="container test1">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    <div class="container test2">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    <div class="container test3">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    <div class="container test4">
+        <div class="item red">A</div>
+        <div class="item green">B</div>
+        <div class="item blue">C</div>
+    </div>
+    
+</body>
+</html>
